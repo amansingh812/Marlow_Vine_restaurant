@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marlow &amp; Vine — Café &amp; Kitchen, Fitzroy</title>
+    <meta
+      name="description"
+      content="Marlow & Vine is a neighbourhood café and kitchen on Gertrude Street, Fitzroy. Seasonal brunch, specialty coffee and a sunlit courtyard."
+    />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Marlow & Vine — Café & Kitchen, Fitzroy" />
+    <meta property="og:description" content="Marlow & Vine is a neighbourhood café and kitchen on Gertrude Street, Fitzroy. Seasonal brunch, specialty coffee and a sunlit courtyard." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Marlow & Vine — Café & Kitchen, Fitzroy" />
+    <meta property="twitter:description" content="Marlow & Vine is a neighbourhood café and kitchen on Gertrude Street, Fitzroy. Seasonal brunch, specialty coffee and a sunlit courtyard." />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+    <script>
+      ;(function () {
+        var stored = localStorage.getItem('theme')
+        var dark = stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches
+        if (dark) document.documentElement.classList.add('dark')
+      })()
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <!-- LCP hero image — keep in sync with copy.hero.image in src/data.ts -->
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="
+        https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=768&q=60 768w,
+        https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1080&q=60 1080w,
+        https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=60 1600w,
+        https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1920&q=60 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <!-- Async font load: print media swaps to all once loaded, so first paint isn't blocked -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
