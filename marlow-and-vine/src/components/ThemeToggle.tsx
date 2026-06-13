@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 function currentlyDark(): boolean {
   return document.documentElement.classList.contains('dark')
@@ -13,17 +13,7 @@ interface Props {
 export default function ThemeToggle({ onDark = false }: Props) {
   const [dark, setDark] = useState(currentlyDark)
 
-  // Follow system changes while the user hasn't chosen explicitly
-  useEffect(() => {
-    const mq = matchMedia('(prefers-color-scheme: dark)')
-    const onChange = (e: MediaQueryListEvent) => {
-      if (localStorage.getItem('theme')) return
-      document.documentElement.classList.toggle('dark', e.matches)
-      setDark(e.matches)
-    }
-    mq.addEventListener('change', onChange)
-    return () => mq.removeEventListener('change', onChange)
-  }, [])
+  // No system theme listener, we respect the user's manual preference and default to light.
 
   function toggle() {
     const next = !dark
